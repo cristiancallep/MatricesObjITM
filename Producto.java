@@ -1,6 +1,6 @@
 public class Producto {
     private String nombre;
-    private int precio;
+    private double precio;
     private int cantidad;
 
     public Producto(String nombre, int precio, int cantidad) {
@@ -20,11 +20,11 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
