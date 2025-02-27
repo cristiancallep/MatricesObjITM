@@ -7,7 +7,8 @@ public class Main {
         Metodos m = new Metodos();
         Scanner scanner = new Scanner(System.in);
         int option;
-        int dim;
+        int f;
+        int c;
         String nombre;
 
         do {
@@ -17,7 +18,7 @@ public class Main {
             System.out.println("2. ");
             System.out.println("3. ");
             System.out.println("4. ");
-            System.out.println("5. ");
+            System.out.println("5. Fusion de Matrices");
             System.out.println("6. ");
             System.out.println("7. ");
             System.out.println("8. ");
@@ -30,12 +31,15 @@ public class Main {
             System.out.println("\n\n----------------------------------------------------------------------\n\n");
             switch (option) {
                 case 1:
-                    System.out.println("Ingrese la dimension de la matriz: ");
-                    dim = scanner.nextInt();
+                    System.out.println("Ingrese el # de filas de la matriz");
+                    f = scanner.nextInt();
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    System.out.println("Ingrese el # de columnas de la matriz: ");
+                    c = scanner.nextInt();
                     System.out.println("\n\n----------------------------------------------------------------------\n\n");
                     System.out.println("Inicie con el registro: ");
                     System.out.println("\n\n----------------------------------------------------------------------\n\n");
-                    m.LlenarMatriz(dim);
+                    m.LlenarMatrizM(f,c);
                     System.out.println("\n\n----------------------------------------------------------------------\n\n");
                     System.out.println("Registro finalizado, por favor indique el mnombre del producto a buscar: ");
                     System.out.println("\n\n----------------------------------------------------------------------\n\n");
@@ -52,6 +56,34 @@ public class Main {
 
                     break;
                 case 5:
+                    System.out.println("Ingrese el # de filas de la primera matriz: ");
+                    f = scanner.nextInt();
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    System.out.println("Ingrese el # de columnas de la primera matriz: ");
+                    c = scanner.nextInt();
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    System.out.println("Inicie con el registro de la primera matriz: ");
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    m.LlenarMatrizM(f,c);
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    System.out.println("Registro finalizado");
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+
+                    System.out.println("Ingrese el # de filas de la segunda matriz: ");
+                    f = scanner.nextInt();
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    System.out.println("Ingrese el # de columnas de la segunda matriz: ");
+                    c = scanner.nextInt();
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    System.out.println("Inicie con el registro de la segunda matriz: ");
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    m.LlenarMatrizN(f,c);
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+                    System.out.println("Registro finalizado");
+                    System.out.println("\n\n----------------------------------------------------------------------\n\n");
+
+                    m.SumarMatrices();
+                    m.imprimirSuma();
 
                     break;
                 case 6:
